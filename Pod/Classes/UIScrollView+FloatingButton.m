@@ -441,7 +441,7 @@ void Swizzle(Class c, SEL orig, SEL new)
                 [view.button setImage:view.image forState:UIControlStateNormal];
             }
             if ([view isRounded]) {
-                view.button.layer.cornerRadius = view.button.frame.size.width/2;
+                view.button.layer.cornerRadius = view.button.frame.size.height/2;
             }
         } else {
             NSAssert(NO, @"You must assign a valid UIImage type for -setImage:");
