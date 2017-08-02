@@ -133,7 +133,14 @@ typedef NS_ENUM(NSInteger, MEVFloatingButtonPosition) {
  @param imagePadding A float indicating the padding.
  @discussion 10.0f is the default value when this property is not assigned.
  */
-@property (nonatomic) float imagePadding;
+@property (nonatomic) float imagePaddingHorizontal;
+
+/*! @abstract Sets the padding size between the image and the outline.
+ @param imagePadding A float indicating the padding.
+ @discussion 10.0f is the default value when this property is not assigned.
+ */
+@property (nonatomic) float imagePaddingVertical;
+
 
 /*! @abstract Sets the horizontal offset.
  @param horizontalOffset A float indicating the offset.

@@ -67,7 +67,8 @@ typedef NS_ENUM(NSInteger, MEFloatingButtonState) {
         _shadowRadius = 1;
         _outlineColor = [UIColor blueColor];
         _outlineWidth = kMEFlatingButtonDefaultOutlineWidth;
-        _imagePadding = kMEFlatingButtonDefaultImagePadding;
+        _imagePaddingHorizontal = kMEFlatingButtonDefaultImagePadding;
+        _imagePaddingVertical = kMEFlatingButtonDefaultImagePadding;
         _horizontalOffset = kMEFlatingButtonDefaultHorizontalOffset;
         _verticalOffset = kMEFlatingButtonDefaultVerticalOffset;
         _rounded = NO;
@@ -136,10 +137,16 @@ typedef NS_ENUM(NSInteger, MEFloatingButtonState) {
     _outlineWidth = outlineWidth;
 }
 
-- (void)setImagePadding:(float)imagePadding {
+- (void)setImagePaddingHorizontal:(float)imagePadding {
     if (imagePadding) NSAssert(imagePadding >= 0, @"You must assign a valid CGFloat object for -setImagePadding:");
-    _imagePadding = imagePadding;
+    _imagePaddingHorizontal = imagePadding;
 }
+
+- (void)setImagePaddingVertical:(float)imagePadding {
+    if (imagePadding) NSAssert(imagePadding >= 0, @"You must assign a valid CGFloat object for -setImagePadding:");
+    _imagePaddingVertical = imagePadding;
+}
+
 
 - (void)setHorizontalOffset:(float)horizontalOffset {
     _horizontalOffset = horizontalOffset;
