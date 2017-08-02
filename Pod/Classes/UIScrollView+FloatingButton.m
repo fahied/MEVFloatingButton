@@ -441,7 +441,7 @@ void Swizzle(Class c, SEL orig, SEL new)
         
         // Configure button
         if (view.image) {
-            [view.button setFrame:CGRectMake(0, 0, view.image.size.width + view.imagePadding*2, view.image.size.height + view.imagePadding*2)];
+            [view.button setFrame:CGRectMake(0, 0, view.image.size.width + view.imagePaddingHorizontal*2, view.image.size.height + view.imagePaddingVertical*2)];
             if (view.imageColor) {
                 [view.button setImage:[view.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
             } else {
